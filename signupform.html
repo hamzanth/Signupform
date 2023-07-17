@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        box-sizing: border-box;
+      }
+      div.flexcontainer{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      div.leftside{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+        height: 98vh;
+        border: 1px solid green;
+        background-image: url("photo-hero.jpeg");
+        position: relative;
+      }
+      div.leftside p.tribute{
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+        color: white;
+      }
+      div.leftside p:first-child{
+        text-align: center;
+        padding: 20px;
+        color:white;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      div.rightside{
+        width: 75%;
+        padding: 20px;
+      }
+      div.rightside div.rightheader{
+        padding: 80px 20px 30px;
+        background-color: rgba(0,0,0,0.1);
+      }
+      div.rightheader p{
+        font-size: 17px;
+      }
+      div.rightside div.formlayout{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+      }
+      div.formlayout div.labinp{
+        width: 48%;
+        margin-bottom: 12px;
+      }
+      div.labinp label{
+        font-size: 14px;
+        width: 100%;
+        display: block;
+      }
+      div.labinp input{
+        width: 70%;
+        border: 0.5px solid lightgrey;
+        border-radius: 4px;
+        padding: 4px;
+      }
+      div.labinp input:focus{
+        border: 0.5px solid red;
+      }
+      form.actform{
+        box-shadow: 0px 2px 1px 0px lightgrey;
+      }
+      form.actform p{
+        font-size: 17px;
+      }
+      div.buttons{
+        margin-top: 30px;
+      }
+      div.buttons button{
+        border: none;
+        color: white;
+        background-color: darkgreen;
+        padding: 5px 15px;
+        border-radius: 4px;
+      }
+      @media screen and (max-width:600px){
+        div.leftside{
+          height: 40vh;
+          width: 100%
+        }
+        div.rightside{
+          width: 100%
+        }
+        div.formlayout div.labinp{
+          width: 100%;
+        }
+        div.labinp input{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexcontainer">
+      <div class="leftside">
+        <p>ODIN</p>
+        <p class="tribute">Photo By <ins>Simone Daino</ins> on <ins>Unsplash</ins> </p>
+      </div>
+      <div class="rightside">
+        <div class="rightheader">
+          <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+          <p>You know you want to.</p>
+        </div>
+        <form class="actform" action="index.html" method="post">
+          <p>Let's do this</p>
+          <div class="formlayout">
+            <div class="labinp">
+              <label for="firtname">FIRST NAME</label>
+              <input type="text" name="firstname" id="firstname">
+            </div>
+            <div class="labinp">
+              <label for="lastname">LAST NAME</label>
+              <input type="text" name="lastname" id="lastname">
+            </div>
+          </div>
+          <div class="formlayout">
+            <div class="labinp">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="labinp">
+              <label for="phonenumber">PHONE NUMBER</label>
+              <input type="text" name="phonenumber" id="phonenumber">
+            </div>
+          </div>
+          <div class="formlayout">
+            <div class="labinp">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" id="password">
+            </div>
+            <div class="labinp">
+              <label for="confirmpassword">CONFIRM PASSWORD</label>
+              <input type="text" name="confirmpassword" id="phonenumber">
+            </div>
+          </div>
+          <div class="buttons">
+            <button type="button">Create Account</button>
+            <p>Already have an account? Log in</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
